@@ -1,0 +1,22 @@
+top500 <- read.csv("C:/Users/Navya/Desktop/AIT580 - Analytics-Big data to information/Python/Python_Part2-Mote.csv")
+top500
+any(is.na(top500))
+sum(is.na(top500))
+sum(is.na(top500$Cores))
+sum(is.na(top500$Rmax..TFlop.s.))
+sum(is.na(top500$Rpeak..TFlop.s.))
+sum(is.na(top500$Power..kW.))
+colSums(is.na(top500))
+top500.clean <- na.omit(top500) #To remove NA's
+top500.clean
+any(is.na(top500.clean))
+dim(top500)
+dim(top500.clean)
+nrow(top500.clean)
+ncol(top500.clean)
+head(top500.clean)
+tail(top500.clean)
+summary(top500.clean$Cores, na.rm=TRUE)
+summary(top500.clean$Rmax..TFlop.s., na.rm=TRUE)
+summary(top500.clean$Rpeak..TFlop.s., na.rm=TRUE)
+summary(top500.clean$Power..kW., na.rm=TRUE)
